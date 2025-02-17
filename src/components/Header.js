@@ -2,14 +2,18 @@
 
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="bg-[#1e2a4a] text-white py-4 px-6 fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        {/* Logo */}
         <div className="flex items-center">
           <div className="text-pink-500 text-2xl font-bold">
             <span className="flex items-center gap-2">
@@ -32,7 +36,6 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
           <a
             href="#"
@@ -59,7 +62,7 @@ const Header = () => {
             İLETİŞİM
           </a>
           <div className="relative group">
-            <button className="hover:text-pink-500 transition-colors duration-200 flex items-center">
+            <button className="flex items-center text-white hover:text-pink-500 transition-colors duration-200">
               PORTAL GİRİŞİ
               <svg
                 className="w-4 h-4 ml-1"
@@ -75,10 +78,33 @@ const Header = () => {
                 />
               </svg>
             </button>
+
+            <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-200">
+              <a
+                href="/login/isletme"
+                target="_blank"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-pink-500"
+              >
+                İşletme Giriş
+              </a>
+              <a
+                href="/login/hastane"
+                target="_blank"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-pink-500"
+              >
+                Hastane Giriş
+              </a>
+              <a
+                href="/login/dental"
+                target="_blank"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-pink-500"
+              >
+                Dental-Medikal Giriş
+              </a>
+            </div>
           </div>
         </nav>
 
-        {/* Action Buttons & Social Media */}
         <div className="hidden lg:flex items-center space-x-6">
           <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg transition-colors duration-200">
             Hesap Oluştur
@@ -87,23 +113,30 @@ const Header = () => {
             <a
               href="#"
               className="hover:text-pink-500 transition-colors duration-200"
-            ></a>
+            >
+              <FaFacebookF size={16} />
+            </a>
             <a
               href="#"
               className="hover:text-pink-500 transition-colors duration-200"
-            ></a>
+            >
+              <FaTwitter size={16} />
+            </a>
             <a
               href="#"
               className="hover:text-pink-500 transition-colors duration-200"
-            ></a>
+            >
+              <FaInstagram size={16} />
+            </a>
             <a
               href="#"
               className="hover:text-pink-500 transition-colors duration-200"
-            ></a>
+            >
+              <FaLinkedinIn size={16} />
+            </a>
           </div>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           className="lg:hidden text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -112,7 +145,6 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 right-0 bg-[#1e2a4a] border-t border-gray-700">
           <div className="px-4 py-2 space-y-3">

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -11,22 +12,22 @@ const HeroSlider = () => {
       title: "Satın alma yöneticilerine stratejik avantajlar sunar!",
       description:
         "e-Satinalma.Net, tedarik sistemi yazılımlarındaki zayıflıkların neden olduğu dezavantajları ve tedarik zinciri krizlerini aşma fırsatıdır.",
-
       buttonText: "Üye ol",
+      image: "/images/slide1.png",
     },
     {
       title: "Dijital satınalma platformu",
       description:
         "Modern ve kullanıcı dostu arayüz ile tedarik süreçlerinizi yönetin",
-
       buttonText: "Keşfet",
+      image: "/images/slide2.png",
     },
     {
       title: "Tedarik zinciri yönetimi",
       description:
         "Kapsamlı raporlama ve analiz araçları ile veriye dayalı kararlar alın",
-
       buttonText: "Demo İste",
+      image: "/images/slide3.png",
     },
   ];
 
@@ -47,7 +48,6 @@ const HeroSlider = () => {
 
   return (
     <div className="relative h-screen w-full overflow-hidden mt-16">
-      {/* Slides */}
       <div
         className="relative w-full h-full"
         style={{
@@ -60,14 +60,12 @@ const HeroSlider = () => {
           <div
             key={index}
             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out 
-              ${currentSlide === index ? "opacity-100" : "opacity-0"}`}
+            ${currentSlide === index ? "opacity-100" : "opacity-0"}`}
           >
-            {/* Background Image with Overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-800/80"></div>
 
-            {/* Content */}
             <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex items-center h-full">
+              <div className="flex items-center justify-between h-full">
                 <div className="w-full md:w-1/2 text-white space-y-6 py-12">
                   <h1 className="text-4xl md:text-5xl font-bold leading-tight">
                     {slide.title}
@@ -82,13 +80,25 @@ const HeroSlider = () => {
                     </button>
                   </div>
                 </div>
+
+                <div className="hidden md:block w-1/2 h-[600px] relative">
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-white/5 rounded-3xl overflow-hidden backdrop-blur-md shadow-lg border border-white/10">
+                    <Image
+                      src={slide.image}
+                      alt={slide.title}
+                      width={500}
+                      height={500}
+                      className="w-full h-full object-cover"
+                      priority
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full transition-colors duration-200"
@@ -102,7 +112,6 @@ const HeroSlider = () => {
         <ChevronRight size={24} />
       </button>
 
-      {/* Dots */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
         {slides.map((_, index) => (
           <button

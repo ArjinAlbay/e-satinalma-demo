@@ -1,13 +1,13 @@
 "use client";
 
 import React from "react";
-import Image from "next/image"; // Next.js Image komponenti
+import Image from "next/image";
 
 const References = () => {
   const logos = [
     {
       name: "Azra Galvaniz",
-      image: "/images/azra.png", // Public klasöründen başlayarak
+      image: "/images/azra.png",
     },
     {
       name: "Batı Hastanesi",
