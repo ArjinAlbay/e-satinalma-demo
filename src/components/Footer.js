@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Instagram, Twitter, Youtube, MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 
 const Footer = () => {
   const menuItems = [
@@ -54,21 +54,15 @@ const Footer = () => {
               <a
                 href="#"
                 className="text-white hover:text-pink-500 transition-colors duration-200"
-              >
-                <Instagram size={20} />
-              </a>
+              ></a>
               <a
                 href="#"
                 className="text-white hover:text-pink-500 transition-colors duration-200"
-              >
-                <Twitter size={20} />
-              </a>
+              ></a>
               <a
                 href="#"
                 className="text-white hover:text-pink-500 transition-colors duration-200"
-              >
-                <Youtube size={20} />
-              </a>
+              ></a>
               <a
                 href="#"
                 className="text-white hover:text-pink-500 transition-colors duration-200"

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Instagram, Youtube, Twitter, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -87,21 +87,15 @@ const Header = () => {
             <a
               href="#"
               className="hover:text-pink-500 transition-colors duration-200"
-            >
-              <Instagram size={20} />
-            </a>
+            ></a>
             <a
               href="#"
               className="hover:text-pink-500 transition-colors duration-200"
-            >
-              <Twitter size={20} />
-            </a>
+            ></a>
             <a
               href="#"
               className="hover:text-pink-500 transition-colors duration-200"
-            >
-              <Youtube size={20} />
-            </a>
+            ></a>
             <a
               href="#"
               className="hover:text-pink-500 transition-colors duration-200"
@@ -159,27 +153,19 @@ const Header = () => {
               <a
                 href="#"
                 className="hover:text-pink-500 transition-colors duration-200"
-              >
-                <Instagram size={20} />
-              </a>
+              ></a>
               <a
                 href="#"
                 className="hover:text-pink-500 transition-colors duration-200"
-              >
-                <Twitter size={20} />
-              </a>
+              ></a>
               <a
                 href="#"
                 className="hover:text-pink-500 transition-colors duration-200"
-              >
-                <Youtube size={20} />
-              </a>
+              ></a>
               <a
                 href="#"
                 className="hover:text-pink-500 transition-colors duration-200"
-              >
-                <WhatsApp size={20} />
-              </a>
+              ></a>
             </div>
           </div>
         </div>
