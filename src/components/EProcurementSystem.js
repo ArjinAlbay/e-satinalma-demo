@@ -44,7 +44,7 @@ const EProcurementSystem = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group relative bg-[#4DC6C6] rounded-3xl p-6 text-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              className="group relative bg-[#0F7BB8] rounded-3xl p-6 text-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
             >
               <div className="mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
@@ -80,7 +80,7 @@ const EProcurementSystem = () => {
               veriyoruz.
             </p>
             <div className="pt-4">
-              <button className="bg-[#4DC6C6] text-white px-8 py-3 rounded-lg hover:bg-[#3AA7A7] transition-colors duration-200">
+              <button className="bg-[#0F7BB8] text-white px-8 py-3 rounded-lg hover:bg-[#0F7BB8] transition-colors duration-200">
                 Daha Fazla Bilgi
               </button>
             </div>

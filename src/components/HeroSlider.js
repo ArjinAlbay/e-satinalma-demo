@@ -11,21 +11,21 @@ const HeroSlider = () => {
       title: "Satın alma yöneticilerine stratejik avantajlar sunar!",
       description:
         "e-Satinalma.Net, tedarik sistemi yazılımlarındaki zayıflıkların neden olduğu dezavantajları ve tedarik zinciri krizlerini aşma fırsatıdır.",
-      image: "/api/placeholder/1920/1080",
+
       buttonText: "Üye ol",
     },
     {
       title: "Dijital satınalma platformu",
       description:
         "Modern ve kullanıcı dostu arayüz ile tedarik süreçlerinizi yönetin",
-      image: "/api/placeholder/1920/1080",
+
       buttonText: "Keşfet",
     },
     {
       title: "Tedarik zinciri yönetimi",
       description:
         "Kapsamlı raporlama ve analiz araçları ile veriye dayalı kararlar alın",
-      image: "/api/placeholder/1920/1080",
+
       buttonText: "Demo İste",
     },
   ];
